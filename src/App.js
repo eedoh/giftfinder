@@ -14,7 +14,7 @@ class App extends Component {
         <SearchResults />
 
         <footer id="footer" className="footer">
-          <p>Copyright 2017</p>
+          <p>&copy; 2017 - Giftfinder</p>
         </footer>
       </div>
     );

@@ -1,1 +1,19 @@
 /* FOOTER STYLES */
+.footer{
+  border-top: solid #A44B4B;
+  border-width: 4px;
+  background: #2E2E2E; 
+  position:absolute; 
+  bottom:0; 
+  height:100%;
+  width:100%; 
+  height:100px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  color: #ffffff;
+  text-align: center;
+}
