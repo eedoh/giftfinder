@@ -1,5 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #ffffff;
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 320px;
+  overflow: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  color: #2C3E50;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  min-height: 100vh;
+  position: relative;
+}
+
+strong {
+  font-weight: 600;
+  color: #555;
+}
+
+pre {
+  white-space: pre;
+  word-wrap: normal;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: 'Roboto', sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.clearfix,.clearfix::after,.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+form{
+  padding: 0.5rem;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .4s ease-out;
 }
