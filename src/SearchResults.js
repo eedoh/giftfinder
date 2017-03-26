@@ -46,19 +46,65 @@ export default class SearchResults extends Component {
 
   render() {
     return (
-        <section id="search__results" className="search__results">
-            <div className="container fixed">
-                <div className="grid-thirds">
-                    {
-                        this.state.items.map(function (item, index) {
-                            return(
-                                <SearchResult item={item} key={index}/>
-                            );
-                        })
-                    }
-                </div>
+        <div className="section">
+
+        <aside className="product__filters three columns">
+            <div className="filters__categories">
+                <h2 className="filter__title">Category</h2>
+                <ul className="filter__items">
+                    <li className="filter__item">
+                        <a href="#">Trainers</a>
+                    </li>
+                    <li className="filter__item">
+                        <a href="#">Outdoor</a>
+                    </li>
+                    <li className="filter__item">
+                        <a href="#">Jeans</a>
+                    </li>
+                </ul>
+            </div>
+            <div className="filters__type">
+                <h2 className="filter__title">Type</h2>
+                <ul className="filter__items">
+                    <li className="filter__item">
+                        <a href="#">type 1</a>
+                    </li>
+                    <li className="filter__item">
+                        <a href="#">type 2</a>
+                    </li>
+                    <li className="filter__item">
+                        <a href="#">type 3</a>
+                    </li>
+                </ul>
+            </div>
+            <div className="filters__color">
+                <h2 className="filter__title">Color</h2>
+                <ul className="filter__items">
+                    <li className="filter__item">
+                        <a href="#">Red </a>
+                    </li>
+                    <li className="filter__item">
+                        <a href="#">Green</a>
+                    </li>
+                    <li className="filter__item">
+                        <a href="#">Blue</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+       
+        <section id="search__results" className="search__results nine columns">
+            <div className="row">
+                {
+                    this.state.items.map(function (item, index) {
+                        return(
+                            <SearchResult item={item} key={index}/>
+                        );
+                    })
+                }
             </div>
         </section>
+        </div>
     );
   }
 }

@@ -6,7 +6,7 @@ export default class SearchResult extends Component {
     }
   render() {
     return (
-        <div className='result__item col'>
+        <div className='result__item six columns'>
             <div className="result__item-image">
                 <img src="http://placeskull.com/400/200" alt="item image"/>
             </div>

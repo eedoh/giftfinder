@@ -52,44 +52,103 @@ input[type="search"]:active {
   outline: none;
 }
 
+.section {
+  padding: 50px 0;
+}
 /* FLEX GRID INSTEAD OF FLOATS */
-.grid {
-  display: flex;
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; 
+}
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
 }
 
-.grid .col {
-  flex: 1;
-}
-.grid-thirds {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.grid-thirds .col {
-  width: 32%;
-}
-
-@media (max-width: 400px) {
-  .flex-grid,
-  .grid-thirds {
-    display: block;
-  }
-
-  .flex-grid .col,
-  .grid-thirds .col {
-    width: 100%;
-    margin: 0 0 10px 0;
+/* For devices larger than 400px */
+@media (min-width: 400px) {
+  .container {
+    width: 85%;
+    padding: 0; 
   }
 }
 
-/* GRID CONTAINER STYLES */
-.container{margin-left:auto;margin-right:auto;padding:15px;box-sizing:border-box}
-.container.fixed{max-width:100%}@media(min-width:768px){.container.fixed{width:750px}}@media(min-width:992px){.container.fixed{width:970px}}@media(min-width:1200px){.container.fixed{width:1170px}}
+/* For devices larger than 550px */
+@media (min-width: 550px) {
+  .container {
+    width: 80%; 
+  }
+  .column,
+  .columns {
+    margin-right: 2%; 
+  }
+  .column:last-child,
+  .columns:last-child {
+    margin-right: 0; 
+  }
+
+  .one.column,
+  .one.columns                    { width: 4.66666666667%; }
+  .two.columns                    { width: 13.3333333333%; }
+  .three.columns                  { width: 22%;            }
+  .four.columns                   { width: 30.6666666667%; }
+  .five.columns                   { width: 39.3333333333%; }
+  .six.columns                    { width: 48%;            }
+  .seven.columns                  { width: 56.6666666667%; }
+  .eight.columns                  { width: 65.3333333333%; }
+  .nine.columns                   { width: 74.0%;          }
+  .ten.columns                    { width: 82.6666666667%; }
+  .eleven.columns                 { width: 91.3333333333%; }
+  .twelve.columns                 { width: 100%; margin-left: 0; }
+
+  .one-third.column               { width: 30.6666666667%; }
+  .two-thirds.column              { width: 65.3333333333%; }
+
+  .one-half.column                { width: 48%; }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns          { margin-left: 8.66666666667%; }
+  .offset-by-two.column,
+  .offset-by-two.columns          { margin-left: 17.3333333333%; }
+  .offset-by-three.column,
+  .offset-by-three.columns        { margin-left: 26%;            }
+  .offset-by-four.column,
+  .offset-by-four.columns         { margin-left: 34.6666666667%; }
+  .offset-by-five.column,
+  .offset-by-five.columns         { margin-left: 43.3333333333%; }
+  .offset-by-six.column,
+  .offset-by-six.columns          { margin-left: 52%;            }
+  .offset-by-seven.column,
+  .offset-by-seven.columns        { margin-left: 60.6666666667%; }
+  .offset-by-eight.column,
+  .offset-by-eight.columns        { margin-left: 69.3333333333%; }
+  .offset-by-nine.column,
+  .offset-by-nine.columns         { margin-left: 78.0%;          }
+  .offset-by-ten.column,
+  .offset-by-ten.columns          { margin-left: 86.6666666667%; }
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns       { margin-left: 95.3333333333%; }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns     { margin-left: 52%; }
+
+}
+
 /* CARD STYLES */
 .result__item{
   position: relative;
-  max-width: 400px;
-  margin-right: 15px;
   background-color: #ffffff;
   margin-bottom: 1.6rem;
   box-shadow: 0 1px 3px rgba(0,0,0, 0.12), 0 1px 2px rgba(0,0,0, 0.24);
@@ -130,4 +189,63 @@ input[type="search"]:active {
   padding-right: 1.6rem;
   padding-left: 1.6rem;
   padding-bottom: 1.6rem;
+}
+
+/* SIDEBAR FILTERS STYLES */
+.product__filters{
+  padding: 0 2.5rem;
+  text-align: left;
+}
+
+.filter__title{
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 300;
+  padding: 4px 0;
+  margin: 4px 0;
+  border-bottom: 1px dotted rgba(0,0,0, 0.2);
+}
+
+.filter__hr{
+  margin-bottom:15px;
+  max-width: 50%;
+  border-bottom: 1px dotted #2E2E2E;
+}
+
+.filter__items{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter__items .filter__item{
+  margin: 5px 0;
+}
+
+.filter__item a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.filter__item a:before {
+  width: 30px;
+  text-align: center;
+  font: normal normal normal 14px/1 FontAwesome;
+  content: '\f096';
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.filter__item a:hover {
+  color: #666;
+}
+
+.filter__item a.checked {
+  color: #666;
+}
+
+.filter__item a.checked:before{
+  content: '\f14a';
 }
