@@ -70,7 +70,7 @@ export default class SearchResults extends Component {
                         <a href="#">type 1</a>
                     </li>
                     <li className="filter__item">
-                        <a href="#">type 2</a>
+                        <a href="#" className="checked">type 2</a>
                     </li>
                     <li className="filter__item">
                         <a href="#">type 3</a>
@@ -81,7 +81,7 @@ export default class SearchResults extends Component {
                 <h2 className="filter__title">Color</h2>
                 <ul className="filter__items">
                     <li className="filter__item">
-                        <a href="#">Red </a>
+                        <a href="#" className="checked">Red </a>
                     </li>
                     <li className="filter__item">
                         <a href="#">Green</a>
