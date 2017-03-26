@@ -19,6 +19,16 @@ export default class SearchResults extends Component {
                 title: 'summer boots',
                 price: '320$',
                 desc: 'custom description'
+            },
+            {
+                title: 'item no 3',
+                price: '220$',
+                desc: 'lorem ipsum dolor sit amet'
+            },
+            {
+                title: 'item no 4',
+                price: '20$',
+                desc: 'lorem ipsum dolor sit amet'
             }
             ]
         }
@@ -37,13 +47,17 @@ export default class SearchResults extends Component {
   render() {
     return (
         <section id="search__results" className="search__results">
-            {
-                this.state.items.map(function (item, index) {
-                    return(
-                        <SearchResult item={item} key={index}/>
-                    );
-                })
-            }
+            <div className="container fixed">
+                <div className="grid-thirds">
+                    {
+                        this.state.items.map(function (item, index) {
+                            return(
+                                <SearchResult item={item} key={index}/>
+                            );
+                        })
+                    }
+                </div>
+            </div>
         </section>
     );
   }
